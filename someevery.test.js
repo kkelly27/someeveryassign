@@ -16,15 +16,28 @@ function hasOddNumber(arr){
   })
  }
   
-  describe("#hasNoDuplicates", function() {
-    it("returns true if there are no duplicates in the array", function() {
-      expect(hasNoDuplicates([1, 2, 3, 1])).toEqual(false);
-    });
-    it("returns false if there are duplicates in the array", function() {
-      expect(hasNoDuplicates([1, 2, 3])).toEqual(true);
-    });
+
+function hasNoDuplicates(arr){
+  return arr.every(function(val){
+
+  })
+}
+
+function hasNoDuplicates(arr){
+  return arr.every(function(val){
+    return arr.indexOf(val) === arr.lastIndexOf(val);
   });
+}
   
+
+
+
+  function hasCertainKey(arr, key){
+    return arr.every(function(val){
+      return key in val;
+    })
+  }
+
   describe("#hasCertainKey", function() {
     var arr = [
       { first: "Elie", last: "Schoppik" },
@@ -40,10 +53,6 @@ function hasOddNumber(arr){
     });
   });
   
-  function hasCertainKey(arr, key){
-    return arr.every(function(val){
-      return key in val;
-    })
-  }
+  
   
   
